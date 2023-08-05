@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IP Tracker</title>
+    <link rel = "icon" href="https://cdn-icons-png.flaticon.com/512/6146/6146584.png" type = "x-icon/image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="main">
+        <div class="top">
+            <h2> IP Address : <span id = "ipAddress" class = "ip-address"></span></h2>
+
+            <div class = "info-details-cont">
+                <div>
+                    <h3>Latitude : <span id = "latitude" class = "span-ans"></span></h3>
+                    <h3>Longitude : <span id = "longitude" class = "span-ans"></span></h3>
+                </div>
+
+                <div>
+                    <h3>City : <span id = "city" class = "span-ans"></span></h3>
+                    <h3>Region : <span id = "region" class = "span-ans"></span></h3>
+                </div>
+
+                <div>
+                    <h3>Organisation : <span id = "organisation" class = "span-ans"></span></h3>
+                    <h3>Hostname : <span id = "hostName" class = "span-ans"></span></h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mapCont" id = "mapCont">
+            
+        </div>
+
+        <div class="third-cont">
+            <h3> More Information About You </h3>
+
+            <div class = "more-info-cont">
+                <h4>Time Zone: <span id = "timeZone" class="span-ans"></span></h4>
+                <h4>Date & Time: <span id = "datetime" class="span-ans"></span></h4>
+                <h4>Pincode: <span id = "pincode" class="span-ans"></span></h4>
+                <h4>Message: <span id = "message" class="span-ans"></span></h4>
+            </div>
+        </div>
+
+        <div class="fourth-cont">
+            <h3>Post Offices Near You</h3>
+
+            <div class="search-input-cont">
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+                <input type="search" class="input" id = "input" placeholder="Search by Name Or by Branch Type">
+            </div>
+            
+
+            <div class="all-postoffice-cont" id = "allPostOfficeCont">
+                
+                
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
