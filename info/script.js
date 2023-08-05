@@ -1,17 +1,17 @@
 let ipAddressElement = document.getElementById("ipAddress");
-let latitudeEle = document.getElementById("latitude");
-let longitudeEle = document.getElementById("longitude");
-let cityEle = document.getElementById("city");
-let regionEle = document.getElementById("region");
-let organisationEle = document.getElementById("organisation");
-let hostNameEle = document.getElementById("hostName");
+let latitudeElement = document.getElementById("latitude");
+let longitudeElement = document.getElementById("longitude");
+let cityElement = document.getElementById("city");
+let regionelement = document.getElementById("region");
+let organisationElement = document.getElementById("organisation");
+let hostNameElement = document.getElementById("hostName");
 
-let mapContEle = document.getElementById("mapCont");
+let mapContElement = document.getElementById("mapCont");
 
-let timeZoneEle = document.getElementById("timeZone");
-let datetimeEle = document.getElementById("datetime");
-let pincodeEle = document.getElementById("pincode");
-let messageEle = document.getElementById("message");
+let timeZoneElement = document.getElementById("timeZone");
+let datetimeElement = document.getElementById("datetime");
+let pincodeElement = document.getElementById("pincode");
+let messageElement = document.getElementById("message");
 
 let allPostOfficeCont = document.getElementById("allPostOfficeCont");
 
@@ -146,21 +146,21 @@ async function getIpAdress(){
     .then((data) => {
         console.log(data)
 
-        cityEle.innerText = data.city;
-        regionEle.innerText = data.region;
-        organisationEle.innerText =  data.org;
-        hostNameEle.innerText  =  data.hostname;
+        cityElement.innerText = data.city;
+        regionelement.innerText = data.region;
+        organisationElement.innerText =  data.org;
+        hostNameElement.innerText  =  data.hostname;
 
         let locationArr = data.loc.split(",");
         let lati = parseFloat(locationArr[0]);
         let longi = parseFloat(locationArr[1]);
 
-        latitudeEle.innerText =  lati;
-        longitudeEle.innerText = longi;
+        latitudeElement.innerText =  lati;
+        longitudeElement.innerText = longi;
 
         //embedding map of location 
 
-        mapContEle.innerHTML = `
+        mapContElement.innerHTML = `
                <h3> Your Current Location </h3>
             <iframe src="https://maps.google.com/maps?q=${lati}, ${longi}&z=15&output=embed" width="80%" height="470" frameborder="0" style="border:0" allowfullscreen = "true"></iframe>
             
@@ -181,9 +181,9 @@ async function getIpAdress(){
         day: 'numeric'
         };
 
-        timeZoneEle.innerText = `${data.timezone}`;
-        datetimeEle.innerText = date.toLocaleString('en-US', options);
-        pincodeEle.innerText =  `${data.postal}`;
+        timeZoneElement.innerText = `${data.timezone}`;
+        datetimeElement.innerText = date.toLocaleString('en-US', options);
+        pincodeElement.innerText =  `${data.postal}`;
 
         // fetching postal details 
 
@@ -194,7 +194,7 @@ async function getIpAdress(){
             
             for(let i = 0; i < data.length; i++){
                 
-                messageEle.innerText = data[i].Message;
+                messageElement.innerText = data[i].Message;
                 postOfficeArr = data[i].PostOffice;
 
                 if(postOfficeArr.length === 0){

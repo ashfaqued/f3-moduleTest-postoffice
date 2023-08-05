@@ -1,10 +1,10 @@
 let ipAddress = document.getElementById("ipAddress");
-let getStartedBtnEle = document.getElementById("getStartedBtn");
+let getStartedBtn = document.getElementById("getStartedBtn");
 
 
 
 
-getStartedBtnEle.addEventListener("click", function(){
+getStartedBtn.addEventListener("click", function(){
     window.location.href = "./info";
 })
 
